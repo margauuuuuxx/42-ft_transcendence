@@ -1,0 +1,155 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container - Responsive 1/4/8/16 columns with auto rows -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section - uses display: contents, spans 2 rows -->
+    <app-navbar></app-navbar>
+
+    <!-- Empty first row -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- ROW 1-2: GAME CANVAS -->
+    <!-- Left border with controls (desktop only) -->
+    <div class="hidden lg:flex lg:col-span-1 lg:row-span-2 bg-white p-3 items-center justify-center">
+      <p class="mono-text text-xs font-bold text-center">W / S</p>
+    </div>
+
+    <!-- Game Canvas -->
+    <div class="col-span-full sm:col-span-4 md:col-span-8 lg:col-span-14 lg:row-span-2 bg-white p-4 sm:p-5 md:p-5">
+      <div class="border-4 border-black w-full">
+        <div class="relative w-full" style="aspect-ratio: 1000 / 600;">
+          <canvas id="pongCanvas"
+                  class="absolute inset-0 w-full h-full"
+                  style="image-rendering: pixelated; display:block;"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right border with controls (desktop only) -->
+    <div class="hidden lg:flex lg:col-span-1 lg:row-span-2 bg-white p-3 items-center justify-center">
+      <p class="mono-text text-xs font-bold">↑ / ↓</p>
+    </div>
+
+    <!-- Mobile controls row (shown only on mobile/tablet) -->
+    <div class="col-span-full sm:col-span-4 md:col-span-8 lg:hidden bg-white p-4 flex justify-around items-center gap-4">
+      <div class="flex flex-col items-center">
+        <p class="mono-text text-xs font-bold mb-2">PLAYER 1</p>
+        <p class="mono-text text-xs font-bold">W / S</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <p class="mono-text text-xs font-bold mb-2">PLAYER 2</p>
+        <p class="mono-text text-xs font-bold">↑ / ↓</p>
+      </div>
+    </div>
+
+    <!-- ROW 3: OPTIONS HEADER -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-1 lg:col-span-2 bg-white"></div>
+
+    <!-- Options Title -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 sm:p-5 md:p-5">
+      <h3>OPTIONS</h3>
+      <p class="mono-text text-xs mt-2">Customize your match</p>
+    </div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-3 lg:col-span-8 bg-white"></div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 4: APPEARANCE + GAMEPLAY + BUTTONS -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cell -->
+    <div class="hidden md:block md:col-span-1 lg:col-span-1 bg-white"></div>
+
+    <!-- Appearance + Visual Effects -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 sm:p-5 md:p-5">
+      <p class="mono-text text-xs uppercase tracking-wide mb-3">Appearance</p>
+      <app-select
+        label="Map / Theme"
+        name="theme"
+        id="opt-theme">
+        <option value="classic" selected>CLASSIC</option>
+        <option value="neon">NEON</option>
+        <option value="retro">RETRO</option>
+      </app-select>
+
+      <p class="mono-text text-xs uppercase tracking-wide mb-3 mt-6">Visual Effects</p>
+      <div class="space-y-3">
+        <app-checkbox
+          id="opt-shake"
+          label="Screen shake"
+          checked>
+        </app-checkbox>
+        <app-checkbox
+          id="opt-flash"
+          label="Flash on score"
+          checked>
+        </app-checkbox>
+      </div>
+    </div>
+
+    <!-- Gameplay + Power-ups -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+      <p class="mono-text text-xs uppercase tracking-wide mb-3">Gameplay</p>
+      <div class="space-y-4">
+        <app-input
+          id="opt-ballSpeed"
+          type="number"
+          label="Ball speed"
+          placeholder="300">
+        </app-input>
+        <app-input
+          id="opt-paddleHeight"
+          type="number"
+          label="Paddle height"
+          placeholder="125">
+        </app-input>
+        <app-input
+          id="opt-paddleSpeed"
+          type="number"
+          label="Paddle speed"
+          placeholder="300">
+        </app-input>
+      </div>
+
+      <p class="mono-text text-xs uppercase tracking-wide mb-3 mt-6">Power-ups</p>
+      <app-checkbox
+        id="opt-powerups"
+        label="Enable power-ups">
+      </app-checkbox>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 sm:p-5 md:p-5 flex flex-col gap-3 items-center justify-center">
+      <app-button
+        variant="primary"
+        size="md"
+        id="apply-options">
+        APPLY
+      </app-button>
+      <app-button
+        variant="secondary"
+        size="md"
+        id="reset-options">
+        RESET
+      </app-button>
+    </div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty row -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- Footer Section - uses display: contents -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container - Responsive 1/4/8/16 columns with auto rows -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section - uses display: contents, spans 2 rows -->
+    <app-navbar></app-navbar>
+
+    <!-- Main Content Area -->
+    <div class="col-span-full lg:col-span-16 bg-white p-4 sm:p-6 md:p-8 lg:p-10">
+      <span class="text-2xl sm:text-3xl md:text-4xl title-black-bg">LEADERBOARD</span>
+      <p class="mono-text mt-6 mb-10">Tournament standings and player rankings</p>
+
+      <!-- Completed Tournaments Section -->
+      <div class="mb-12">
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-6 uppercase tracking-wide">Completed Tournaments</h2>
+        <div id="completed-tournaments">
+          <p class="mono-text text-gray-500">Loading...</p>
+        </div>
+      </div>
+      
+      <!-- Ongoing Tournaments Section -->
+      <div>
+        <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-6 uppercase tracking-wide">Ongoing Tournaments</h2>
+        <div id="ongoing-tournaments">
+          <p class="mono-text text-gray-500">Loading...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section - uses display: contents -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

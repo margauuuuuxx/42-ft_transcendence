@@ -1,0 +1,394 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+    <!-- Grid Container - Responsive 1/4/8/16 columns with auto rows -->
+    <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+        <!-- Navbar Section - uses display: contents, spans 2 rows -->
+        <app-navbar></app-navbar>
+
+        <!-- Empty row above content -->
+        <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+        <!-- ROW: TEXT -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- Text -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>TEXT</h3>
+            <p class="mono-text text-sm">Typography samples and text styles</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex flex-col gap-4">
+            <div>
+                <h1 class="mb-2">Title h1</h1>
+                <h2>Title h2</h2>
+                <br>
+                <h3>Title h3</h3>
+                <p class="mt-2">Default paragraph text uses Arial.</p>
+            </div>
+            <div>
+                <p class="mono-text">Mono text for technical content.</p>
+                <p class="mono-text uppercase">>>> Uppercase mono text >>>>>>></p>
+            </div>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: DECORATIVE -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- Decorative Components -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>DECORATIVE</h3>
+            <p class="mono-text text-sm">Web components for visual context</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex items-center gap-4 flex-wrap">
+            <div class="border-2 border-black w-32 h-32">
+                <app-deco-vertical text="VERTICAL" size="md" align="left-bottom"></app-deco-vertical>
+            </div>
+            <div class="border-2 border-black w-32 h-32">
+                <app-deco-player number="01" label="PLAYER" size="md"></app-deco-player>
+            </div>
+            <div class="border-2 border-black w-32 h-32">
+                <app-deco-image src="/assets/images/two_kids_pong.jpg" alt="Ping Pong Players"
+                    size="md"></app-deco-image>
+            </div>
+            <div class="border-2 border-black w-32 h-32">
+                <app-deco-number value="42" size="md"></app-deco-number>
+            </div>
+            <div class="border-2 border-black w-32 h-32">
+                <app-deco-giant-number value="70" size="sm"></app-deco-giant-number>
+            </div>
+            <app-deco-encircled text="17-10-2026" size="lg"></app-deco-encircled>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: BUTTONS -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Buttons -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>BUTTONS</h3>
+            <p class="mono-text text-sm">Interactive button components</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex items-center gap-4 flex-wrap">
+            <app-button variant="secondary" size="md">CLICK ME</app-button>
+            <app-button variant="primary" size="md">PLAY GAME</app-button>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: GRID -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- Grid System -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>16-COL GRID</h3>
+            <p class="mono-text text-sm">The layout structure of any page</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5">
+            <div class="grid grid-cols-16 gap-[2px] bg-black p-[2px] h-24">
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+                <div class="col-span-1 bg-white"></div>
+            </div>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: COLORS -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- Color Palette -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>COLORS</h3>
+            <p class="mono-text text-sm">Not so many...</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex items-center gap-4">
+            <div class="w-24 h-24 bg-black border-2 border-black flex items-center justify-center">
+                <span class="text-white mono-text text-xs">#000</span>
+            </div>
+            <div class="w-24 h-24 border-2 border-black flex items-center justify-center"
+                style="background-color: var(--color-gray);">
+                <span class="text-black mono-text text-xs">#dddddd</span>
+            </div>
+            <div class="w-24 h-24 bg-white border-2 border-black flex items-center justify-center">
+                <span class="text-black mono-text text-xs">#FFF</span>
+            </div>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: INPUTS -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Inputs -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>INPUTS</h3>
+            <p class="mono-text text-sm">Form input components</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex flex-col gap-4">
+            <app-input type="text" label="Username" placeholder="Enter username" size="md">
+            </app-input>
+            <app-input type="password" label="Password" placeholder="Enter password" size="md">
+            </app-input>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: CHECKBOXES -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Checkboxes -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>CHECKBOXES</h3>
+            <p class="mono-text text-sm">Selection components</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex flex-col gap-3">
+            <app-checkbox label="Enable 2FA"></app-checkbox>
+            <app-checkbox label="Notifications"></app-checkbox>
+            <app-checkbox label="Disabled option" disabled></app-checkbox>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: SELECT -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Select -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>SELECT</h3>
+            <p class="mono-text text-sm">Dropdown selection</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex flex-col gap-4">
+            <app-select label="Difficulty" name="difficulty" required>
+                <option value="easy">EASY</option>
+                <option value="medium" selected>MEDIUM</option>
+                <option value="hard">HARD</option>
+                <option value="impossible">IMPOSSIBLE</option>
+            </app-select>
+            <app-select label="Map" name="map">
+                <option value="classic">CLASSIC</option>
+                <option value="neon">NEON</option>
+                <option value="retro">RETRO</option>
+            </app-select>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: TABLE -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Table -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>TABLE</h3>
+            <p class="mono-text text-sm">Leaderboard component</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5">
+            <app-table>
+                <table slot="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Player</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Alice</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Bob</td>
+                            <td>38</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Charlie</td>
+                            <td>35</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </app-table>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: ALERTS -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Alerts -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>ALERTS</h3>
+            <p class="mono-text text-sm">Notification components</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex flex-col gap-3">
+            <app-alert variant="success" dismissible>Game completed successfully!</app-alert>
+            <app-alert variant="error" dismissible>Connection error. Please try again.</app-alert>
+            <app-alert variant="warning">Your session will expire in 5 minutes.</app-alert>
+            <app-alert variant="info">New tournament starting soon!</app-alert>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: AVATARS -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Avatars -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>AVATARS</h3>
+            <p class="mono-text text-sm">User profile images</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex items-center gap-4">
+            <app-avatar size="sm"></app-avatar>
+            <app-avatar size="md"></app-avatar>
+            <app-avatar size="lg"></app-avatar>
+            <app-avatar src="/assets/images/two_kids_pong.jpg" size="md"></app-avatar>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: PROGRESS -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Progress -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>PROGRESS</h3>
+            <p class="mono-text text-sm">Score and loading bars</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex flex-col gap-4">
+            <app-progress value="42" max="100" label="Player Score"></app-progress>
+            <app-progress value="75" max="100" label="Tournament Progress"></app-progress>
+            <app-progress value="100" max="100"></app-progress>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: MODAL -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- UI Components: Modal -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>MODAL</h3>
+            <p class="mono-text text-sm">Dialog component</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex items-center gap-4">
+            <app-button variant="primary" onclick="document.querySelector('#demo-modal').setAttribute('open', '')">
+                OPEN MODAL
+            </app-button>
+            <app-modal id="demo-modal" size="md">
+                <div slot="title">GAME OPTIONS</div>
+                <div slot="content">
+                    <p class="mono-text text-sm mb-4">Configure your game settings before starting:</p>
+                    <div class="flex flex-col gap-4 mb-6">
+                        <app-checkbox label="Enable sound effects" checked></app-checkbox>
+                        <app-checkbox label="Show animations" checked></app-checkbox>
+                        <app-checkbox label="Hardcore mode"></app-checkbox>
+                    </div>
+                    <div class="flex gap-3 justify-end">
+                        <app-button variant="secondary"
+                            onclick="document.querySelector('#demo-modal').removeAttribute('open')">
+                            CANCEL
+                        </app-button>
+                        <app-button variant="primary"
+                            onclick="document.querySelector('#demo-modal').removeAttribute('open')">
+                            START GAME
+                        </app-button>
+                    </div>
+                </div>
+            </app-modal>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- ROW: SYMBOLS -->
+        <!-- Left border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- Symbols -->
+        <div class="col-span-full sm:col-span-2 md:col-span-3 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+            <h3>SYMBOLS</h3>
+            <p class="mono-text text-sm">Unicode decoration</p>
+        </div>
+        <div class="col-span-full sm:col-span-2 md:col-span-5 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5 flex flex-wrap gap-6 items-center">
+            <span class="symbol-brutalist">■</span>
+            <span class="symbol-brutalist">□</span>
+            <span class="symbol-brutalist">▲</span>
+            <span class="symbol-brutalist">△</span>
+            <span class="symbol-brutalist">▼</span>
+            <span class="symbol-brutalist">▽</span>
+            <span class="symbol-brutalist">◀</span>
+            <span class="symbol-brutalist">▶</span>
+            <span class="symbol-brutalist">●</span>
+            <span class="symbol-brutalist">○</span>
+            <span class="symbol-brutalist">◆</span>
+            <span class="symbol-brutalist">◇</span>
+            <span class="symbol-brutalist">┌</span>
+            <span class="symbol-brutalist">┐</span>
+            <span class="symbol-brutalist">└</span>
+            <span class="symbol-brutalist">┘</span>
+            <span class="symbol-brutalist">├</span>
+            <span class="symbol-brutalist">┤</span>
+            <span class="symbol-brutalist">┬</span>
+            <span class="symbol-brutalist">┴</span>
+            <span class="symbol-brutalist">│</span>
+            <span class="symbol-brutalist">─</span>
+        </div>
+
+        <!-- Right border -->
+        <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+        <!-- Empty row below content -->
+        <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+        <!-- Footer Section - uses display: contents -->
+        <app-footer></app-footer>
+
+    </div>
+</div>

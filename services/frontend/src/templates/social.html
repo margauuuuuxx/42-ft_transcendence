@@ -1,0 +1,65 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container - Responsive 1/4/8/16 columns with auto rows -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section - uses display: contents, spans 2 rows -->
+    <app-navbar></app-navbar>
+
+    <!-- Main Content Area -->
+    <div class="col-span-full lg:col-span-16 bg-white p-4 sm:p-8 md:p-12 lg:p-20">
+      <span class="text-2xl sm:text-3xl md:text-4xl title-black-bg">SOCIAL</span>
+      <p class="mono-text mt-6 mb-8">Manage your social connections</p>
+
+      <!-- Search Section -->
+      <div class="mb-8 sm:mb-10 md:mb-12 p-4 sm:p-5 md:p-6 border-2 border-black bg-gray-50">
+        <h2 class="mono-text text-lg sm:text-xl mb-4">ADD FRIENDS</h2>
+        <div class="flex gap-4">
+          <input 
+            type="email" 
+            id="searchEmail" 
+            placeholder="Search by email..." 
+            class="flex-1 p-3 border-2 border-black font-mono"
+          >
+          <button id="searchBtn" class="px-6 py-3 bg-black text-white font-mono hover:bg-gray-800">
+            SEARCH
+          </button>
+        </div>
+        <div id="searchResult" class="mt-4"></div>
+      </div>
+
+      <!-- Friends Lists -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+
+        <!-- Pending Requests -->
+        <div class="border-2 border-black p-4 sm:p-5 md:p-6">
+          <h2 class="mono-text text-lg sm:text-xl mb-4">PENDING REQUESTS</h2>
+          <div id="pendingRequests">
+            <p class="mono-text text-gray-500">Loading...</p>
+          </div>
+        </div>
+
+        <!-- Friends List -->
+        <div class="border-2 border-black p-4 sm:p-5 md:p-6">
+          <h2 class="mono-text text-lg sm:text-xl mb-4">FRIENDS</h2>
+          <div id="friendsList">
+            <p class="mono-text text-gray-500">Loading...</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sent Requests -->
+      <div class="mt-6 sm:mt-7 md:mt-8 border-2 border-black p-4 sm:p-5 md:p-6">
+        <h2 class="mono-text text-lg sm:text-xl mb-4">SENT REQUESTS</h2>
+        <div id="sentRequests">
+          <p class="mono-text text-gray-500">Loading...</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer Section - uses display: contents -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

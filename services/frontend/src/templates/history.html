@@ -1,0 +1,183 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container - Responsive 1/4/8/16 columns with auto rows -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section - uses display: contents, spans 2 rows -->
+    <app-navbar></app-navbar>
+
+    <!-- Empty first row -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- ROW 1: PAGE TITLE -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white">
+      <app-deco-vertical text="HISTORY" size="md" align="left-bottom"></app-deco-vertical>
+    </div>
+
+    <!-- Page Title -->
+    <div class="col-span-full sm:col-span-3 md:col-span-6 lg:col-span-8 bg-white p-4 sm:p-5 md:p-5">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl title-black-bg inline-block">PONG HISTORY</h1>
+      <p class="mono-text text-sm mt-3">>>> The legendary game that started it all</p>
+    </div>
+
+    <!-- Giant Number -->
+    <div class="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-3 bg-white p-4 sm:p-5 md:p-5 flex items-center justify-center">
+      <app-deco-giant-number value="72" size="lg"></app-deco-giant-number>
+    </div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-3 bg-white"></div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 2: CHAPTER 1 - THE BIRTH OF PONG -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-2 bg-white"></div>
+
+    <!-- Chapter 1 -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+      <h3>THE BIRTH OF PONG</h3>
+      <p class="mono-text text-xs mt-3">
+        In 1972, Atari engineer Allan Alcorn created Pong as a training exercise.
+        This simple table tennis simulation became the first commercially successful video game,
+        launching an entire industry. Installed in a California bar, the prototype quickly
+        broke down—not from malfunction, but from being filled with too many quarters.
+      </p>
+    </div>
+
+    <!-- Decorative Number -->
+    <div class="hidden sm:block sm:col-span-2 lg:col-span-2 bg-white p-3">
+      <app-deco-number value="01" size="sm"></app-deco-number>
+      <p class="mono-text text-xs mt-2">1972</p>
+    </div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-5 bg-white"></div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 3: CHAPTER 2 - ARCADE PHENOMENON -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-6 bg-white"></div>
+
+    <!-- Chapter 2 -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+      <h3>ARCADE PHENOMENON</h3>
+      <p class="mono-text text-xs mt-3">
+        Pong cabinets spread rapidly across American arcades and bars.
+        By 1974, Atari had sold over 8,000 units, spawning countless imitators.
+        The game's intuitive controls—just a rotating paddle—made it accessible
+        to everyone, creating the arcade culture that defined the 1970s.
+      </p>
+    </div>
+
+    <!-- Decorative Encircled -->
+    <div class="hidden md:flex md:col-span-2 lg:col-span-2 bg-white p-3 items-center justify-center">
+      <app-deco-encircled text="8K UNITS" size="sm"></app-deco-encircled>
+    </div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-1 bg-white"></div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 4: CHAPTER 3 - HOME CONSOLE ERA -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Decorative Number -->
+    <div class="hidden sm:block sm:col-span-2 lg:col-span-2 bg-white p-3">
+      <app-deco-number value="02" size="sm"></app-deco-number>
+      <p class="mono-text text-xs mt-2">1975</p>
+    </div>
+
+    <!-- Chapter 3 -->
+    <div class="col-span-full sm:col-span-2 md:col-span-4 lg:col-span-6 bg-white p-4 sm:p-5 md:p-5">
+      <h3>HOME CONSOLE ERA</h3>
+      <p class="mono-text text-xs mt-3">
+        In 1975, Atari released Home Pong, bringing the arcade experience to living rooms.
+        Sold exclusively through Sears, it became the must-have Christmas gift.
+        This success paved the way for the Atari 2600 and established home gaming
+        as a permanent fixture in consumer electronics.
+      </p>
+    </div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-6 bg-white"></div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 5: CHAPTER 4 - CULTURAL IMPACT -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-1 lg:col-span-3 bg-white"></div>
+
+    <!-- Chapter 4 -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+      <h3>CULTURAL IMPACT</h3>
+      <p class="mono-text text-xs mt-3">
+        Pong transcended gaming to become a cultural icon. Featured in films,
+        TV shows, and art installations, it symbolized the dawn of the digital age.
+        The game's minimalist design—two paddles, a ball, and a net—proved that
+        compelling gameplay didn't require complex graphics or narratives.
+      </p>
+    </div>
+
+    <!-- Decorative Number -->
+    <div class="hidden sm:block sm:col-span-2 lg:col-span-2 bg-white p-3">
+      <app-deco-number value="03" size="sm"></app-deco-number>
+      <p class="mono-text text-xs mt-2">ICON</p>
+    </div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-4 bg-white"></div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 6: CHAPTER 5 - LEGACY -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-3 lg:col-span-7 bg-white"></div>
+
+    <!-- Chapter 5 -->
+    <div class="col-span-full sm:col-span-3 md:col-span-4 lg:col-span-6 bg-white p-4 sm:p-5 md:p-5">
+      <h3>LEGACY</h3>
+      <p class="mono-text text-xs mt-3">
+        More than 50 years later, Pong remains the foundation of gaming history.
+        Its influence extends beyond entertainment—it pioneered interactive media,
+        real-time graphics, and competitive multiplayer. Every modern game, from mobile
+        apps to VR experiences, owes a debt to those two digital paddles and a bouncing ball.
+      </p>
+    </div>
+
+    <!-- Decorative Encircled -->
+    <div class="hidden sm:flex sm:col-span-1 lg:col-span-1 bg-white p-3 items-center justify-center">
+      <app-deco-encircled text="50Y" size="sm"></app-deco-encircled>
+    </div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty row -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- Footer Section - uses display: contents -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

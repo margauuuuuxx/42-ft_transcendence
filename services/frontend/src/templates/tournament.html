@@ -1,0 +1,67 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section -->
+    <app-navbar></app-navbar>
+
+    <!-- Main Content Area -->
+    <div class="col-span-full lg:col-span-16 bg-white p-4 sm:p-6 md:p-8">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl title-black-bg mb-6">TOURNAMENT</h1>
+      
+      <!-- Notification Area -->
+      <div id="tournament-notifications" class="mb-6"></div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+        
+        <!-- Create Tournament Section -->
+        <div class="border-2 border-black p-4 sm:p-6">
+          <h2 class="text-lg sm:text-xl font-bold mb-4">Create New Tournament</h2>
+          <form id="create-tournament-form" class="space-y-4">
+            <div>
+              <label class="block mono-text mb-2 text-sm sm:text-base">Tournament Name:</label>
+              <input 
+                type="text" 
+                name="name" 
+                required
+                class="w-full border-2 border-black p-2 text-sm sm:text-base"
+                placeholder="Winter Championship">
+            </div>
+            <div>
+              <label class="block mono-text mb-2 text-sm sm:text-base">Max Players:</label>
+              <select 
+                name="max_players" 
+                class="w-full border-2 border-black p-2 text-sm sm:text-base">
+                <option value="4">4 Players</option>
+                <option value="8" selected>8 Players</option>
+                <option value="16">16 Players</option>
+              </select>
+            </div>
+            <button 
+              type="submit"
+              class="w-full bg-black text-white py-2 sm:py-3 hover:bg-gray-800 transition text-sm sm:text-base">
+              Create Tournament
+            </button>
+          </form>
+        </div>
+
+        <!-- Tournaments List -->
+        <div class="border-2 border-black p-4 sm:p-6">
+          <h2 class="text-lg sm:text-xl font-bold mb-4">Available Tournaments</h2>
+          <div id="tournament-list" class="space-y-4">
+            <p class="mono-text text-sm sm:text-base">Loading tournaments...</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tournament Details (shown when viewing a specific tournament) -->
+      <div id="tournament-details" class="mt-6 sm:mt-8"></div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

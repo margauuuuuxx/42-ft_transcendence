@@ -1,0 +1,32 @@
+- check if wallet has avax 
+    npx hardhat run scripts/deploy.ts --network fuji
+
+- test contract compilation
+    npx hardhat compile
+
+- deploy to fuji testnet
+    npx hardhat run scripts/deploy.ts --network fuji
+
+- test API server locally
+    cd ..
+    npm run build
+    npm run start
+
+- test API endpoints 
+after build: 
+    curl http://localhost:3000/api/blockchain/scores
+
+    curl http://localhost:3000/api/blockchain/scores/1
+
+    curl -X POST http://localhost:3000/api/blockchain/scores \
+    -H "Content-Type: application/json" \
+    -d '{
+        "tournamentID": 1,
+        "player1": "0x1234567890123456789012345678901234567890",
+        "player2": "0x0987654321098765432109876543210987654321",
+        "scorePlayer1": 5,
+        "scorePlayer2": 3
+    }'
+
+- verify its on the blockchain 
+    visit: https://testnet.snowtrace.io/ and search for the contract address saved in deployment-info.json

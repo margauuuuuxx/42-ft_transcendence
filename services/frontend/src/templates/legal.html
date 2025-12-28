@@ -1,0 +1,134 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container - Responsive 1/4/8/16 columns with auto rows -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section - uses display: contents, spans 2 rows -->
+    <app-navbar></app-navbar>
+
+    <!-- Empty row above content -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- Left border column -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Main Content Area -->
+    <div class="col-span-full lg:col-span-14 bg-white p-4 sm:p-6 md:p-8 lg:p-12">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl title-black-bg inline-block mb-8">LEGAL</h1>
+      <p class="mono-text text-sm mb-12">Privacy Policy and Terms of Service</p>
+
+      <!-- Privacy Policy Section -->
+      <section class="mb-16">
+        <h2 class="title-black-bg-small inline-block mb-6">PRIVACY POLICY</h2>
+
+        <div class="space-y-6 mono-text text-sm">
+          <div>
+            <h3 class="font-bold uppercase mb-2">1. Data Collection</h3>
+            <p>This application collects the following personal information:</p>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>Username and email address for account creation</li>
+              <li>Profile images uploaded by users</li>
+              <li>Game statistics and match history</li>
+              <li>Two-factor authentication data (if enabled)</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">2. Data Usage</h3>
+            <p>Your data is used solely for:</p>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>Providing game functionality and user authentication</li>
+              <li>Displaying leaderboards and match history</li>
+              <li>Improving user experience and platform features</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">3. Data Security</h3>
+            <p>We implement security measures including:</p>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>Password hashing and encryption</li>
+              <li>HTTPS/WSS secure connections</li>
+              <li>Protection against SQL injection and XSS attacks</li>
+              <li>Optional two-factor authentication</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">4. Data Storage</h3>
+            <p>Your data is stored securely on our servers and is not shared with third parties. As this is an educational project for 42 School, data retention follows academic guidelines.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">5. User Rights</h3>
+            <p>You have the right to:</p>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>Access your personal data</li>
+              <li>Request data modification or deletion</li>
+              <li>Withdraw consent for data processing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Terms of Service Section -->
+      <section class="mb-8">
+        <h2 class="title-black-bg-small inline-block mb-6">TERMS OF SERVICE</h2>
+
+        <div class="space-y-6 mono-text text-sm">
+          <div>
+            <h3 class="font-bold uppercase mb-2">1. Acceptance of Terms</h3>
+            <p>By accessing and using this platform, you accept and agree to be bound by these Terms of Service. This application is an educational project developed as part of the 42 School curriculum.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">2. User Conduct</h3>
+            <p>Users agree to:</p>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>Provide accurate registration information</li>
+              <li>Maintain the security of their account credentials</li>
+              <li>Not engage in cheating, harassment, or abusive behavior</li>
+              <li>Not attempt to exploit vulnerabilities or disrupt the service</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">3. Service Availability</h3>
+            <p>This platform is provided "as is" for educational purposes. We do not guarantee continuous availability and reserve the right to modify or discontinue the service at any time.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">4. Intellectual Property</h3>
+            <p>This project is developed as part of 42 School's Transcendence project. All code and assets are subject to the school's academic policies.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">5. Liability</h3>
+            <p>As an educational project, this platform is provided without warranties of any kind. Users acknowledge that this is a learning exercise and use the platform at their own risk.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold uppercase mb-2">6. Contact</h3>
+            <p>For questions regarding these terms or privacy policy, please contact the project maintainers through the 42 School network.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Back Button -->
+      <div class="mt-12">
+        <app-button data-navigate="/home" variant="secondary" size="md">
+          BACK TO HOME
+        </app-button>
+      </div>
+    </div>
+
+    <!-- Right border column -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty row below content -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- Footer Section - uses display: contents -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

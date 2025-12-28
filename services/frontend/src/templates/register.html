@@ -1,0 +1,42 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container - Responsive 1/4/8/16 columns with auto rows -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section - uses display: contents, spans 2 rows -->
+    <app-navbar></app-navbar>
+
+    <!-- Main Content Area -->
+    <div class="col-span-full sm:col-span-4 md:col-span-8 lg:col-span-16 bg-white p-4 sm:p-8 md:p-12 lg:p-20">
+      <span class="text-2xl sm:text-3xl md:text-4xl title-black-bg">REGISTER</span>
+      <form id="registerForm" class="mt-10 max-w-2xl space-y-6">
+        <div class="flex flex-col">
+          <label for="reg-username" class="mono-text text-sm uppercase tracking-wide mb-2">Username</label>
+          <input id="reg-username" name="username" type="text" required minlength="3" class="w-full px-4 py-3 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black focus:border-black" placeholder="your_username">
+        </div>
+        <div class="flex flex-col">
+          <label for="reg-email" class="mono-text text-sm uppercase tracking-wide mb-2">Email</label>
+          <input id="reg-email" name="email" type="email" required class="w-full px-4 py-3 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black focus:border-black" placeholder="you@example.com">
+        </div>
+        <div class="flex flex-col">
+          <label for="reg-password" class="mono-text text-sm uppercase tracking-wide mb-2">Password</label>
+          <input id="reg-password" name="password" type="password"  class="w-full px-4 py-3 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black focus:border-black" placeholder="••••••••">
+        </div>
+        <div class="flex flex-col">
+          <label for="reg-password-confirm" class="mono-text text-sm uppercase tracking-wide mb-2">Verify Password</label>
+          <input id="reg-password-confirm" name="password_confirm" type="password"  class="w-full px-4 py-3 border border-black rounded focus:outline-none focus:ring-2 focus:ring-black focus:border-black" placeholder="••••••••">
+        </div>
+        <div id="message_display" class="hidden mono-text text-sm uppercase tracking-wide border border-black bg-white text-red-500 px-4 py-3 rounded">
+          <!-- Error messages will appear here -->
+        </div>
+        <div class="flex gap-4 pt-4">
+          <button type="submit" class="flex-1 bg-black text-white px-6 py-4 uppercase tracking-wide font-medium hover:bg-white hover:text-black border border-black transition-colors">Create Account</button>
+          <a data-navigate="/login" class="flex-1 bg-white text-black px-6 py-4 uppercase tracking-wide font-medium border border-black hover:bg-black hover:text-white transition-colors text-center cursor-pointer">Login</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Footer Section - uses display: contents -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

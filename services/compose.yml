@@ -1,0 +1,96 @@
+services:
+
+  nginx:
+    build: nginx/.
+    container_name: nginx
+    ports:
+      - "8080:80"
+      - "4343:443"
+    volumes:
+      - avatar_imgs:/var/www/avatars
+      - ./frontend:/var/www/html
+    networks:
+        - transcendance
+    depends_on:
+      - frontend
+    restart: always
+
+  frontend:
+    build: frontend/.
+    container_name: frontend
+    tty: true
+    volumes:
+        - ./frontend:/usr/src/app/
+        - node_modules_frontend:/usr/src/app/node_modules  # Isolate node_modules in Docker volume
+    networks:
+        - transcendance
+
+  users:
+    build: users/.
+    container_name: users
+    tty: true
+    volumes:
+        - ./users:/usr/src/app/
+        - avatar_imgs:/usr/src/app/uploads
+        - node_modules_users:/usr/src/app/node_modules  # Isolate node_modules in Docker volume
+    networks:
+        - transcendance
+
+  auth:
+    build: auth/.
+    container_name: auth
+    tty: true
+    volumes:
+        - ./auth:/usr/src/app/
+        - node_modules_auth:/usr/src/app/node_modules  # Isolate node_modules in Docker volume
+    env_file:
+      - .env
+    networks:
+        - transcendance
+
+  game:
+    build: game/.
+    container_name: game
+    tty: true
+    volumes:
+        - ./game:/usr/src/app/
+        - node_modules_game:/usr/src/app/node_modules  # Isolate node_modules in Docker volume
+    networks:
+        - transcendance
+  
+  blockchain:
+    build: blockchain/.
+    container_name: blockchain
+    tty: true
+    volumes:
+      - ./blockchain:/usr/src/app/blockchain
+      - node_modules_blockchain:/usr/src/app/blockchain/node_modules
+    env_file:
+      - blockchain/.env
+    networks:
+      - transcendance
+
+  tournament:
+    build: tournament/.
+    container_name: tournament
+    tty: true
+    volumes:
+      - ./tournament:/usr/src/app/tournament
+      - node_modules_tournament:/usr/src/app/tournament/node_modules
+    networks: 
+      - transcendance
+    depends_on:
+      - blockchain
+
+networks:
+  transcendance:
+    driver: bridge
+
+volumes:
+  node_modules_frontend:
+  node_modules_users:
+  node_modules_game:
+  node_modules_auth:
+  avatar_imgs:
+  node_modules_blockchain:
+  node_modules_tournament:

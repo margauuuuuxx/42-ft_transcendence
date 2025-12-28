@@ -1,0 +1,195 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container - Responsive 1/4/8/16 columns with auto rows -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section - uses display: contents, spans 2 rows -->
+    <app-navbar></app-navbar>
+
+    <!-- Empty first row -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- ROW 1: TITLE + USER ID + AVATAR -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Page Title Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl title-black-bg inline-block">PROFILE</h2>
+      <p class="mono-text text-sm mt-3">Manage your account</p>
+    </div>
+
+    <!-- User ID Card Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5" style="background-color: var(--color-gray-light);">
+      <h3 class="mb-3">USER ID</h3>
+      <div class="mono-text text-xs space-y-1">
+        <div class="flex justify-between">
+          <span>USERNAME:</span>
+          <span id="display-username" class="font-bold">---</span>
+        </div>
+        <div class="flex justify-between">
+          <span>EMAIL:</span>
+          <span id="display-email" class="font-bold">---</span>
+        </div>
+        <div class="flex justify-between">
+          <span>2FA:</span>
+          <span id="display-2fa" class="font-bold">DISABLED</span>
+        </div>
+        <div class="flex justify-between">
+          <span>STATUS:</span>
+          <span class="font-bold">ACTIVE</span>
+        </div>
+        <div class="flex justify-between border-t-2 border-black pt-1 mt-2">
+          <span>MEMBER SINCE:</span>
+          <span class="font-bold">2025</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatar Preview -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-3 bg-white p-4">
+      <div class="w-full aspect-square border-2 border-black overflow-hidden bg-white max-w-[150px] mx-auto sm:mx-0">
+        <img id="profile-image-preview" src="" alt="Profile preview" class="w-full h-full object-cover hidden">
+        <div id="profile-image-placeholder" class="w-full h-full flex items-center justify-center mono-text text-sm">NO IMAGE</div>
+      </div>
+    </div>
+
+    <!-- Decorative Number -->
+    <div class="hidden lg:flex lg:col-span-1 bg-white p-3 items-center justify-center">
+      <app-deco-number value="01" size="sm"></app-deco-number>
+    </div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 2: DECORATIVES -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Decorative Giant Number -->
+    <div class="hidden lg:flex lg:col-span-3 bg-white p-3 items-center justify-center">
+      <app-deco-giant-number value="42" size="md"></app-deco-giant-number>
+    </div>
+
+    <!-- Empty cells -->
+    <div class="hidden lg:block lg:col-span-7 bg-white"></div>
+
+    <!-- Decorative Encircled -->
+    <div class="hidden lg:flex lg:col-span-3 bg-white p-3 items-center justify-center">
+      <app-deco-encircled text="EST. 2025" size="sm"></app-deco-encircled>
+    </div>
+
+    <!-- Decorative Vertical Text -->
+    <div class="hidden lg:block lg:col-span-1 bg-white">
+      <app-deco-vertical text="EDIT" size="sm" align="left-bottom"></app-deco-vertical>
+    </div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 3: WARNING + FORM -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Warning Message Cell -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 sm:p-5 md:p-5">
+      <div class="flex items-start gap-3">
+        <span class="text-3xl">▲</span>
+        <div class="mono-text text-xs">
+          <p class="font-bold mb-1 uppercase">Warning</p>
+          <p>Changes to your profile information will be saved immediately. Make sure all data is correct before submitting.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Profile Form Cell -->
+    <div class="col-span-full sm:col-span-4 md:col-span-8 lg:col-span-9 bg-white p-4 sm:p-5 md:p-5">
+      <h3 class="mb-4">EDIT PROFILE</h3>
+
+      <form id="profile-form" class="space-y-4">
+        <!-- Username Input -->
+        <app-input
+          id="profile-username"
+          type="text"
+          name="username"
+          label="Username"
+          placeholder="your_username"
+          required
+          size="md">
+        </app-input>
+
+        <!-- Email Input -->
+        <app-input
+          id="profile-email"
+          type="email"
+          name="email"
+          label="Email"
+          placeholder="you@example.com"
+          required
+          size="md">
+        </app-input>
+
+        <!-- File Upload -->
+        <div>
+          <label class="mono-text text-xs uppercase block mb-2">Profile Image</label>
+          <input id="profile-image" name="profile_image" type="file" accept="image/*"
+                 class="border-2 border-black p-2 w-full text-xs focus:outline-none focus:bg-black focus:text-white transition-colors" />
+          <p class="mono-text text-xs mt-1" style="color: var(--color-gray);">JPG, PNG or GIF (max 2MB)</p>
+        </div>
+
+        <!-- 2FA Checkbox -->
+        <app-checkbox id="auth" name="auth" label="Enable Two-Factor Authentication"></app-checkbox>
+
+        <!-- Message Display -->
+        <div id="profile-message" class="hidden">
+          <!-- Success/Error messages will appear here as app-alert -->
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex gap-4 pt-2">
+          <app-button type="submit" variant="primary" size="lg" class="flex-1">
+            SAVE CHANGES
+          </app-button>
+          <app-button data-navigate="/home" variant="secondary" size="lg" class="flex-1">
+            CANCEL
+          </app-button>
+        </div>
+        <!-- <div class="flex justify-end pt-6">
+          <button id="logout-btn" type="button" class="bg-red-600 text-white px-6 py-3 uppercase tracking-wide font-medium hover:bg-red-700 border border-red-600 transition-colors">Logout</button>
+        </div> -->
+      </form>
+    </div>
+
+    <!-- Empty cell -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 4: LOGOUT -->
+    <!-- Left border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-4 bg-white"></div>
+
+    <!-- Logout Cell -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 sm:p-5 md:p-5">
+      <app-button id="logout-btn" variant="secondary" size="md">
+        LOGOUT
+      </app-button>
+    </div>
+
+    <!-- Empty cells -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-5 bg-white"></div>
+
+    <!-- Right border -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty row below content -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- Footer Section - uses display: contents -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

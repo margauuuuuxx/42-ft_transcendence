@@ -1,0 +1,229 @@
+<div class="min-h-screen bg-white p-4 sm:p-6 md:p-10">
+  <!-- Grid Container - Responsive columns -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-16 auto-rows-[minmax(3rem,auto)] gap-[2px] bg-black p-[2px] min-h-[calc(100vh-2rem)] sm:min-h-[calc(100vh-3rem)] md:min-h-[calc(100vh-5rem)]">
+
+    <!-- Navbar Section - uses display: contents, spans 2 rows -->
+    <app-navbar></app-navbar>
+
+    <!-- Empty first row (hidden on mobile) -->
+    <div class="hidden lg:block col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- ROW 2: HERO SECTION -->
+    <!-- Left border with vertical text (hidden on mobile) -->
+    <div class="hidden lg:block lg:col-span-1 bg-white">
+      <app-deco-vertical text="HOME" size="md" align="left-bottom"></app-deco-vertical>
+    </div>
+
+    <!-- Main Title -->
+    <div class="col-span-full sm:col-span-4 md:col-span-6 lg:col-span-6 bg-white p-4 md:p-5 flex items-center">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl title-black-bg inline-block">BRUTALIST<br>PONG GAME</h1>
+    </div>
+
+    <!-- Giant Number 42 -->
+    <div class="col-span-full sm:col-span-2 md:col-span-2 lg:col-span-4 bg-white p-4 md:p-5 flex items-center justify-center">
+      <app-deco-giant-number value="42" size="lg"></app-deco-giant-number>
+    </div>
+
+    <!-- Image: Two Kids Pong -->
+    <div class="col-span-full sm:col-span-2 md:col-span-4 lg:col-span-4 bg-white p-0">
+      <app-deco-image src="/assets/images/two_kids_pong.jpg" alt="Two Kids Playing Pong" size="lg"></app-deco-image>
+    </div>
+
+    <!-- Empty cell (hidden on mobile) -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 3: FEATURES INTRO -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Subtitle -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 md:p-5">
+      <p class="mono-text text-sm uppercase">>>> The Last Project</p>
+      <p class="mono-text text-xs mt-2" style="color: var(--color-gray);">42 School Final Assignment</p>
+    </div>
+
+    <!-- Empty cells (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-6 bg-white"></div>
+
+    <!-- Pong Game Module -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 md:p-5">
+      <h3>PONG GAME</h3>
+      <p class="mono-text text-xs mt-3">Server-Side Logic</p>
+      <p class="mono-text text-xs">WebSocket API</p>
+      <p class="mono-text text-xs">Real-Time Sync</p>
+    </div>
+
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 4: IMAGE + TOURNAMENT -->
+    <div class="hidden lg:block lg:col-span-1 bg-white">
+      <app-deco-vertical text="FEATURES" size="sm" align="left-bottom"></app-deco-vertical>
+    </div>
+
+    <!-- Image: Ping Pong IRL -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-0">
+      <app-deco-image src="/assets/images/ping_pong_irl.jpg" alt="Ping Pong IRL" size="md"></app-deco-image>
+    </div>
+
+    <!-- Tournament Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 md:p-5">
+      <h3>TOURNAMENT</h3>
+      <p class="mono-text text-xs mt-3">Single Elimination</p>
+      <p class="mono-text text-xs">8-16 Players</p>
+      <p class="mono-text text-xs">Blockchain Scores</p>
+    </div>
+
+    <!-- Empty cell (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-2 bg-white"></div>
+
+    <!-- Team member 01 -->
+    <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-2 bg-white p-0">
+      <app-deco-player number="01" label="ANTHONY" size="sm"></app-deco-player>
+    </div>
+
+    <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-2 bg-white"></div>
+
+    <!-- ROW 5: BLOCKCHAIN + SCREEN -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cell (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-2 bg-white"></div>
+
+    <!-- Blockchain Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-3 md:p-4">
+      <h3>BLOCKCHAIN</h3>
+      <p class="mono-text text-xs mt-3">Avalanche Testnet</p>
+      <p class="mono-text text-xs">Solidity Contract</p>
+      <p class="mono-text text-xs">Score Verification</p>
+    </div>
+
+    <!-- Image: Screen Pong -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-0">
+      <app-deco-image src="/assets/images/screen_pong.jpg" alt="Screen Pong" size="md"></app-deco-image>
+    </div>
+
+    <!-- Empty cell (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-2 bg-white"></div>
+
+    <!-- Team member 02 -->
+    <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-2 bg-white p-0">
+      <app-deco-player number="02" label="MARGAUX" size="sm"></app-deco-player>
+    </div>
+
+    <!-- ROW 6: AUTHENTICATION + SECURITY -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-2 bg-white"></div>
+
+    <!-- Authentication Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 md:p-5">
+      <h3>AUTHENTICATION</h3>
+      <p class="mono-text text-xs mt-3">User Registration</p>
+      <p class="mono-text text-xs">Login System</p>
+      <p class="mono-text text-xs">Session Management</p>
+    </div>
+
+    <!-- Empty cells (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-2 lg:col-span-2 bg-white"></div>
+
+    <!-- Security Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 md:p-5">
+      <h3>SECURITY</h3>
+      <p class="mono-text text-xs mt-3">2FA Authentication</p>
+      <p class="mono-text text-xs">JWT Tokens</p>
+      <p class="mono-text text-xs">HTTPS / WSS</p>
+    </div>
+
+    <!-- Empty cell -->
+    <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-2 bg-white"></div>
+
+    <!-- ROW 7: DATABASE + USER PROFILE -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-3 lg:col-span-3 bg-white"></div>
+
+    <!-- Database Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 md:p-5">
+      <h3>DATABASE</h3>
+      <p class="mono-text text-xs mt-3">SQLite</p>
+      <p class="mono-text text-xs">User Data</p>
+      <p class="mono-text text-xs">Match History</p>
+    </div>
+
+    <!-- Empty cell (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-1 lg:col-span-1 bg-white"></div>
+
+    <!-- Team member 03 -->
+    <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-2 bg-white p-0">
+      <app-deco-player number="03" label="QUENTIN" size="sm"></app-deco-player>
+    </div>
+
+    <!-- User Profile Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-4 bg-white p-4 md:p-5">
+      <h3>USER PROFILE</h3>
+      <p class="mono-text text-xs mt-3">Friends System</p>
+      <p class="mono-text text-xs">Stats & Ranking</p>
+      <p class="mono-text text-xs">Match History</p>
+    </div>
+
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- ROW 8: ARCADE IMAGE + TECH STACK -->
+    <div class="hidden lg:block lg:col-span-1 bg-white">
+      <app-deco-vertical text="TECH" size="sm" align="left-bottom"></app-deco-vertical>
+    </div>
+
+    <!-- Image: Arcade -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-0">
+      <app-deco-image src="/assets/images/arcade.jpg" alt="Arcade" size="md"></app-deco-image>
+    </div>
+
+    <!-- Empty cells (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-3 lg:col-span-3 bg-white"></div>
+
+    <!-- Tech Stack Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-4 lg:col-span-5 bg-white p-4 md:p-5">
+      <h3>TECH STACK</h3>
+      <p class="mono-text text-xs mt-3">Docker Compose</p>
+      <p class="mono-text text-xs">Fastify + Node.js</p>
+      <p class="mono-text text-xs">TS + Tailwind CSS</p>
+    </div>
+
+    <!-- Team member 04 -->
+    <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-2 bg-white p-0">
+      <app-deco-player number="04" label="ULYSSE" size="sm"></app-deco-player>
+    </div>
+
+    <!-- ROW 9: CALL TO ACTION -->
+    <div class="hidden lg:block lg:col-span-1 bg-white"></div>
+
+    <!-- Empty cells (hidden on mobile) -->
+    <div class="hidden md:block md:col-span-4 lg:col-span-4 bg-white"></div>
+
+    <!-- Play Button Section -->
+    <div class="col-span-full sm:col-span-4 md:col-span-6 lg:col-span-5 bg-white p-6 md:p-8 flex flex-col items-center justify-center">
+      <h2 class="text-xl sm:text-2xl md:text-3xl title-black-bg-small inline-block mb-4">READY TO PLAY?</h2>
+      <div class="flex flex-col gap-4 w-full items-center">
+        <app-button data-navigate="/play" variant="primary" size="lg">
+          START GAME
+        </app-button>
+        <app-button data-navigate="/tournament" variant="secondary" size="lg">
+          JOIN TOURNAMENT
+        </app-button>
+      </div>
+    </div>
+
+    <!-- Encircled decoration -->
+    <div class="col-span-2 sm:col-span-2 md:col-span-2 lg:col-span-6 bg-white p-3 flex items-center justify-center">
+      <app-deco-encircled text="EST. 2025" size="md"></app-deco-encircled>
+    </div>
+
+    <!-- Empty row -->
+    <div class="col-span-full lg:col-span-16 bg-white"></div>
+
+    <!-- Footer Section - uses display: contents -->
+    <app-footer></app-footer>
+
+  </div>
+</div>

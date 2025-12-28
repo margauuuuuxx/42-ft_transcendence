@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+/* Brutalist Color Palette */
+:root {
+    --color-black: #000000;
+    --color-gray: #dddddd;
+    --color-gray-light: #F3F4F6;
+    --color-white: #ffffff;
+}
+
+/* Default paragraph style */
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* 16-Column Grid System */
+.grid-cols-16 {
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+}
+
+/* Display contents for navbar and footer - makes them transparent in grid */
+app-navbar,
+app-footer {
+    display: contents;
+}
+
+/* Brutalist Typography Styles */
+
+/* Vertical text for sidebar navigation */
+.vertical-text-left {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-family: Monaco, 'Lucida Console', monospace;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Brutalist title with black background - Large */
+.title-black-bg,
+h1,
+h2 {
+    display: inline-block;
+    font-family: 'Arial Black', 'Arial Bold', sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+}
+
+/* Smaller size for h3 headings */
+h3 {
+    display: inline-block;
+    font-family: 'Arial Black', 'Arial Bold', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 0.25rem 0.625rem;
+    margin-bottom: 0.75rem;
+    /* mb-3 equivalent */
+}
+
+/* Brutalist title with black background - Small (for overriding h2 default size) */
+.title-black-bg-small {
+    display: inline-block;
+    font-family: 'Arial Black', 'Arial Bold', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 0.25rem 0.625rem;
+}
+
+/* Monospace text for technical content */
+.mono-text {
+    font-family: Monaco, 'Lucida Console', monospace;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+}
+
+/* Brutalist image filter - high contrast, grainy black and white */
+.img-brutalist {
+    filter: grayscale(100%) contrast(150%) brightness(1.1);
+}
+
+/* Brutalist symbol style */
+.symbol-brutalist {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Custom checkbox styles */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid var(--color-black);
+    background: var(--color-white);
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.75rem;
+    height: 0.75rem;
+    background: var(--color-black);
+}
+
+/* Input field styles */
+.input-brutalist {
+    font-family: Monaco, 'Lucida Console', monospace;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+}
+
+/* Button styles */
+.btn-brutalist {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1rem;
+    border: 2px solid var(--color-black);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Button variants */
+.btn-primary {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.btn-secondary {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.btn-secondary:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Table styles - Leaderboard brutalist design */
+.table-brutalist {
+    width: 100%;
+    border: 2px solid var(--color-black);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table-brutalist thead {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.table-brutalist th {
+    padding: 0.75rem;
+    font-family: Monaco, 'Lucida Console', monospace;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.table-brutalist th.text-right {
+    text-align: right;
+}
+
+.table-brutalist th.text-center {
+    text-align: center;
+}
+
+.table-brutalist td {
+    padding: 0.75rem;
+    font-family: Monaco, 'Lucida Console', monospace;
+    font-size: 0.875rem;
+}
+
+.table-brutalist tbody tr {
+    border-top: 2px solid var(--color-white);
+}
+
+.table-brutalist tbody tr:hover {
+    background: var(--color-gray-light);
+}
+
+.table-brutalist tfoot tr {
+    background: var(--color-black);
+    height: 1.5rem;
+}
+
+.table-brutalist tfoot td {
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    padding: 0;
+}

@@ -2,36 +2,13 @@
 
 A modern web-based Pong game platform with tournament management and blockchain score verification.
 
+Project made with my fellow 42 students and friends Quentin Alpesse (@QuintusAlp), Ulysse Gerkens (@ulsgks) and Anthony Goldberg (@Anthoneau)
+
 ## Project Overview
 
 Transcendence is a complete gaming platform that reimagines the classic Pong game with modern web technologies, featuring real-time multiplayer gameplay, tournament management, and blockchain-verified score storage. Built as a microservices architecture with a focus on user experience and competitive gaming.
 
-## Team Members & Roles
-
-| Member | Role | Primary Responsibilities |
-|--------|------|-------------------------|
-| **Margaux** | Product Owner (PO) | Requirements definition, blockchain integration, tournament system |
-| **Quentin** | Project Manager (PM) | Architecture design, microservices setup, authentication system |
-| **Ulysse** | Tech Lead | Frontend architecture, custom design system, game statistics |
-| **Anthony** | Developer | Pong game engine, game customization, browser compatibility |
-
-## Project Management Approach
-
-### Methodology
-We adopted an **Agile-inspired iterative approach** with weekly sprints and clear milestone deliveries:
-
-- **Sprint Planning**: Weekly team meetings to define deliverables and assign tasks
-- **Feature-based Development**: Each team member owned specific modules while collaborating on integration
-- **Continuous Integration**: Docker-based development environment ensuring consistent deployments
-- **Version Control**: Git workflow with feature branches and peer reviews
-
-### Organization Structure
-- **Documentation-First**: Comprehensive architecture planning before implementation
-- **API Contracts**: Clear service boundaries defined upfront ([API_CONTRACT.md](docs/architecture/API_CONTRACT.md))
-- **Modular Development**: Independent service development with integration points
-- **Testing Integration**: Continuous testing of microservices communication
-
-## Technology Stack
+## Tech Stack
 
 ### Frontend Technologies
 - **TypeScript**: Type-safe JavaScript for robust frontend development
@@ -155,39 +132,38 @@ For complete schema details, see [DATABASE_SCHEMA.md](docs/architecture/DATABASE
 
 ### Enhanced Features
 
-#### 🏆 **Tournament System** (Margaux - 1 point)
+#### 🏆 **Tournament System**
 - **Bracket Management**: Single-elimination tournaments with automatic bracket generation
 - **Registration System**: Open tournaments with player capacity management
 - **Match Recording**: Automated score tracking with winner advancement
 - **Leaderboards**: Real-time tournament standings and statistics
 
-#### ✅ **Backend Framework** (All - 1 point)
+#### ✅ **Backend Framework**
 - **Fastify Implementation**: High-performance API endpoints across all services
 - **TypeScript Integration**: Type-safe development with shared interfaces
 - **Plugin Ecosystem**: Cookie handling, file uploads, CORS management
 
-#### 🎨 **Custom Design System** (Ulysse - 1 point)
+#### 🎨 **Custom Design System**
 - **Tailwind Configuration**: Custom color palette and component system
 - **Responsive Layout**: Mobile-first design with adaptive interfaces
 - **Accessibility**: WCAG-compliant navigation and form controls
 
-#### 📊 **Game Statistics** (Ulysse - 1 point)
+#### 📊 **Game Statistics**
 - **Player Analytics**: Win/loss ratios, average scores, playing time
 - **Historical Data**: Match history with detailed game statistics  
 - **Performance Metrics**: Response time tracking and skill progression
 
-#### 🌐 **Cross-browser Support** (Anthony, Margaux - 1 point)
+#### 🌐 **Cross-browser Support**
 - **Firefox Primary**: Optimized for Firefox as main browser
 - **Chrome Compatible**: Full functionality across Chromium-based browsers
 - **Safari Testing**: iOS/macOS compatibility verification
 
-#### 🎯 **Game Customization** (Anthony - 1 point)
+#### 🎯 **Game Customization**
 - **Visual Themes**: Multiple color schemes and paddle designs
 - **Gameplay Modes**: Speed variations, paddle size options
 - **Power-ups**: Special abilities and game modifiers
 
-### Mandatory Requirements ✅
-
+#### **Other Features**
 - **Privacy Policy & Terms**: Legal compliance pages
 - **Multi-user Support**: Concurrent user sessions and real-time updates
 - **HTTPS Security**: SSL/TLS encryption for all communications  
@@ -195,55 +171,6 @@ For complete schema details, see [DATABASE_SCHEMA.md](docs/architecture/DATABASE
 - **CSS Framework**: Tailwind CSS implementation
 - **Clear Database Schema**: Documented relationships and constraints
 - **Docker Deployment**: Complete containerized application
-
-## Individual Contributions
-
-### Margaux (Product Owner)
-- **Blockchain Integration**: Smart contract development and Avalanche deployment
-- **Tournament Backend**: Complete tournament API with bracket generation
-- **Product Vision**: Requirements analysis and feature specification  
-- **Documentation**: Privacy policy and legal compliance content
-
-### Quentin (Project Manager)
-- **Architecture Design**: Microservices structure and API contracts
-- **Authentication System**: JWT implementation with 2FA support
-- **DevOps Setup**: Docker configuration and deployment automation
-- **Backend Services**: User management and session handling
-
-### Ulysse (Tech Lead)
-- **Frontend Architecture**: TypeScript setup and component structure  
-- **Design System**: Custom Tailwind configuration and UI components
-- **Statistics Dashboard**: Game analytics and data visualization
-- **User Interface**: Profile management and settings pages
-
-### Anthony (Developer)
-- **Pong Game Engine**: Canvas rendering and physics implementation
-- **Game Features**: Customization options and gameplay mechanics
-- **Browser Testing**: Cross-platform compatibility and optimization
-- **Performance Tuning**: Frame rate optimization and responsive controls
-
-## Selected Modules & Points (15/14 required)
-
-| Module | Points | Implementation | Owner |
-|--------|--------|----------------|-------|
-| Web-based game (Pong) | 2 | ✅ Complete | Anthony |
-| Backend as microservices | 2 | ✅ Complete | Quentin |  
-| Standard user management & auth | 2 | ✅ Complete | Quentin |
-| Blockchain tournament scores | 2 | ✅ Complete | Margaux |
-| Backend framework (Fastify) | 1 | ✅ Complete | All |
-| Two-Factor Authentication | 1 | ✅ Complete | Quentin |
-| Tournament system | 1 | ✅ Complete | Margaux |
-| Custom design system | 1 | ✅ Complete | Ulysse |
-| Additional browsers support | 1 | ✅ Complete | Anthony, Margaux |
-| Game statistics dashboard | 1 | ✅ Complete | Ulysse |
-| Game customization options | 1 | ✅ Complete | Anthony |
-| **Total** | **15** | | |
-
-**Module Justifications:**
-- **Microservices**: Chosen for scalability and team parallel development
-- **Blockchain**: Provides transparency and permanent score records for competitive play
-- **2FA**: Essential security for competitive gaming platform
-- **Tournament System**: Core feature that differentiates from basic Pong implementations
 
 ## Getting Started
 
@@ -284,7 +211,7 @@ make re
 ```
 
 The application will be available at:
-- **Main Application**: http://localhost:8080
+- **Main Application**: http://localhost:4343
 
 ### Architecture
 The application consists of 6 microservices:
@@ -295,8 +222,6 @@ The application consists of 6 microservices:
 - **game**: Pong game logic and statistics
 - **tournament**: Tournament management with blockchain integration
 - **blockchain**: Avalanche smart contract interface
-
-For detailed architecture information, see [docs/architecture/](docs/architecture/).
 
 ## Security
 
